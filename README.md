@@ -131,3 +131,118 @@ CREATE TABLE table_name (
 ## 📄 Table Queries
 
 ### Create Table
+
+```sql
+CREATE TABLE students (
+  id INT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  age INT,
+  city VARCHAR(100)
+);
+```
+
+### Insert Records
+
+```sql
+INSERT INTO students (id, name, age, city)
+VALUES 
+(1, 'Ali', 20, 'Lahore'),
+(2, 'Sara', 22, 'Karachi');
+```
+
+### Select Data
+
+```sql
+SELECT * FROM students;
+SELECT name, city FROM students;
+```
+
+### WHERE Clause
+
+```sql
+SELECT * FROM students WHERE age > 20;
+```
+
+**Operators:**
+
+* Arithmetic: `+`, `-`, `*`, `/`, `%`
+* Comparison: `=`, `!=`, `<`, `>`, `<=`, `>=`
+* Logical: `AND`, `OR`, `NOT`, `IN`, `BETWEEN`, `LIKE`
+
+---
+
+## 🔄 Modify Table
+
+```sql
+ALTER TABLE students ADD COLUMN email VARCHAR(100);
+ALTER TABLE students DROP COLUMN email;
+ALTER TABLE students RENAME TO learners;
+
+ALTER TABLE students
+CHANGE COLUMN old_name new_name datatype;
+MODIFY COLUMN age TINYINT NOT NULL;
+```
+
+---
+
+## ❌ Delete/Truncate/Update
+
+```sql
+-- Delete specific row
+DELETE FROM students WHERE id = 1;
+
+-- Delete all rows but keep structure
+TRUNCATE TABLE students;
+
+-- Update data
+UPDATE students SET age = 23 WHERE name = 'Sara';
+```
+
+---
+
+## 🔗 Joins in SQL
+
+### Types of Joins
+
+| Join Type  | Description                        |
+| ---------- | ---------------------------------- |
+| INNER JOIN | Returns rows with matching values  |
+| LEFT JOIN  | All from left + matched from right |
+| RIGHT JOIN | All from right + matched from left |
+| FULL JOIN  | All from both sides (via `UNION`)  |
+| SELF JOIN  | Table joins with itself            |
+
+```sql
+SELECT s.name, c.course_name
+FROM student s
+INNER JOIN course c
+ON s.id = c.student_id;
+```
+
+---
+
+## 📊 Aggregate Functions
+
+```sql
+SELECT COUNT(*) FROM students;
+SELECT MAX(age) FROM students;
+SELECT MIN(age) FROM students;
+SELECT AVG(age) FROM students;
+SELECT SUM(age) FROM students;
+```
+
+---
+
+## 📚 GROUP BY & HAVING
+
+```sql
+-- Count students per city
+SELECT city, COUNT(*) FROM students GROUP BY city;
+
+-- Cities with more than 5 students
+SELECT city, COUNT(*) as total FROM students
+GROUP BY city
+HAVING total > 5;
+```
+
+---
