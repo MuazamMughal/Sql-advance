@@ -71,3 +71,27 @@ SHOW DATABASES;
 
 ```sql
 USE db_name;
+
+CREATE TABLE table_name (
+  column1 datatype constraint,
+  column2 datatype constraint,
+  ...
+);
+```
+
+---
+
+## 🧮 SQL Data Types
+
+* `INT`, `TINYINT`, `BIGINT`
+* `VARCHAR(n)`, `TEXT`
+* `DATE`, `DATETIME`
+* `FLOAT`, `DOUBLE`
+* `BOOLEAN`
+
+**Signed vs Unsigned:**
+
+* `TINYINT` → `-128 to 127`
+* `TINYINT UNSIGNED` → `0 to 255`
+
+---
