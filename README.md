@@ -310,10 +310,3 @@ ON UPDATE CASCADE;
 ---
 
 > Made with ❤️ by Muazam Mughal
-
-```
-
----
-
-Would you like me to also send this as a downloadable `.md` file or create a GitHub repo structure for it?
-```
