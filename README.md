@@ -1,10 +1,4 @@
-Sure, Muazam! Here's the complete **SQL Learning Notes** in clean, single-file GitHub markdown format, without any Apna College branding. This is ready to paste into a `.md` file for your GitHub repository.
 
----
-
-### ✅ Final GitHub Markdown Format (Ready to Paste)
-
-```markdown
 # 🧠 SQL Full Course Notes
 
 Welcome to my complete SQL learning notes. This markdown file contains all concepts, commands, syntax, and examples to help revise SQL quickly and efficiently.
