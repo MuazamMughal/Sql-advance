@@ -246,3 +246,80 @@ HAVING total > 5;
 ```
 
 ---
+
+## 📌 ORDER BY & LIMIT
+
+```sql
+SELECT * FROM students ORDER BY age DESC;
+SELECT * FROM students LIMIT 10;
+```
+
+---
+
+## 📐 Subqueries
+
+```sql
+-- Students scoring above average
+SELECT name FROM students
+WHERE marks > (SELECT AVG(marks) FROM students);
+```
+
+```sql
+-- Students with even roll numbers
+SELECT name FROM students
+WHERE roll_no IN (SELECT roll_no FROM students WHERE roll_no % 2 = 0);
+```
+
+---
+
+## 👥 Views in SQL
+
+```sql
+CREATE VIEW student_view AS
+SELECT name, city FROM students;
+
+-- Use the view
+SELECT * FROM student_view;
+```
+
+---
+
+## 📎 Foreign Key Cascading
+
+* `ON DELETE CASCADE`: Deletes related rows in child table.
+* `ON UPDATE CASCADE`: Updates FK in child table when PK is updated.
+
+```sql
+FOREIGN KEY (city_id) REFERENCES cities(id)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+```
+
+---
+
+## 🧠 Practice Questions
+
+1. Get students who live in 'Lahore'
+2. Count students in each city with `GROUP BY`
+3. Get names of students with marks above average
+4. Perform a `LEFT JOIN` between `students` and `courses`
+5. Create a view for students from Islamabad
+6. Update marks for students from Karachi by +5
+
+---
+
+## 🚀 Learn More
+
+* 📘 [MySQL Docs](https://dev.mysql.com/doc/)
+* 📚 Practice on platforms like SQLZoo, LeetCode, HackerRank
+
+---
+
+> Made with ❤️ by Muazam Mughal
+
+```
+
+---
+
+Would you like me to also send this as a downloadable `.md` file or create a GitHub repo structure for it?
+```
