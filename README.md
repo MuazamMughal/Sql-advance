@@ -95,3 +95,39 @@ CREATE TABLE table_name (
 * `TINYINT UNSIGNED` → `0 to 255`
 
 ---
+
+## 🧰 SQL Commands Categories
+
+| Category               | Description         | Examples                              |
+| ---------------------- | ------------------- | ------------------------------------- |
+| **DDL** (Definition)   | Schema operations   | `CREATE`, `DROP`, `ALTER`, `TRUNCATE` |
+| **DQL** (Query)        | Read data           | `SELECT`                              |
+| **DML** (Manipulation) | Modify data         | `INSERT`, `UPDATE`, `DELETE`          |
+| **DCL** (Control)      | Access control      | `GRANT`, `REVOKE`                     |
+| **TCL** (Transaction)  | Handle transactions | `COMMIT`, `ROLLBACK`                  |
+
+---
+
+## 🔑 Keys in SQL
+
+* **Primary Key (PK)**: Uniquely identifies each record (Only 1 allowed, NOT NULL).
+* **Foreign Key (FK)**: Refers to a PK in another table (Can be multiple, can be NULL).
+
+---
+
+## 📎 SQL Constraints
+
+| Constraint    | Description                 |
+| ------------- | --------------------------- |
+| `NOT NULL`    | Value must be provided      |
+| `UNIQUE`      | No duplicate values allowed |
+| `PRIMARY KEY` | Unique + Not Null           |
+| `FOREIGN KEY` | Links two tables            |
+| `DEFAULT`     | Sets default value          |
+| `CHECK`       | Restricts range of values   |
+
+---
+
+## 📄 Table Queries
+
+### Create Table
